@@ -13,12 +13,12 @@ const AnimalForm = (props) => {
 }
 
 export default withFormik({
-  mapPropsToValue: (values) => {
+  mapPropsToValues: (values) => {
     return {
-      species: values.species || 'default value'
+      species: values.species || 'default species'
     }
   },
   handleSubmit: (values) => {
-    console.log(values)
+    console.log(values);
   }
 })(AnimalForm)
